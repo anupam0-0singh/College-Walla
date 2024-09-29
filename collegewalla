@@ -1,0 +1,393 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 31, 2022 at 11:35 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `collegewalla`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `about-us`
+--
+
+CREATE TABLE `about-us` (
+  `about-id` int(11) NOT NULL,
+  `about-name` varchar(150) NOT NULL,
+  `about-details` text NOT NULL,
+  `facebook` text NOT NULL,
+  `insta` text NOT NULL,
+  `lnkdn` text NOT NULL,
+  `about-image` text NOT NULL,
+  `about-date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `about-us`
+--
+
+INSERT INTO `about-us` (`about-id`, `about-name`, `about-details`, `facebook`, `insta`, `lnkdn`, `about-image`, `about-date`) VALUES
+(1, 'Anupam Singh', 'About here ', '', '', '', 'img/anupam.jpeg', '2021-09-22 20:59:50'),
+(2, 'Rajesh Bhadra', 'About here ', 'https://www.facebook.com/rajesh.bhabra.9', '', '', 'img/rajesh-college-website.jpeg', '2021-09-22 20:59:50'),
+(3, 'Aman Shaw', 'About here', '', '', '', 'img/aman.jpeg', '2021-09-22 20:59:50'),
+(4, 'Shivani Sha', 'About here', '', '', '', 'img/shivani.jpeg', '2021-09-22 20:59:50'),
+(5, 'Swapnil Datta', 'About Here', '', '', '', 'img/swapnil.jpeg', '2021-09-22 20:59:50');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `admin_id` int(11) NOT NULL,
+  `admin_name` varchar(200) NOT NULL,
+  `admin_email` varchar(200) NOT NULL,
+  `admin_password` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `admin_name`, `admin_email`, `admin_password`) VALUES
+(1, 'admin1', 'admin1@gmail.com', 'admin1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `college-details`
+--
+
+CREATE TABLE `college-details` (
+  `college-id` int(11) NOT NULL,
+  `college-name` varchar(100) NOT NULL,
+  `college-content` text NOT NULL,
+  `college_img` varchar(250) NOT NULL,
+  `slug_url` text NOT NULL,
+  `post-date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `college-details`
+--
+
+INSERT INTO `college-details` (`college-id`, `college-name`, `college-content`, `college_img`, `slug_url`, `post-date`) VALUES
+(1, 'JADAVPUR UNIVERSITY', 'numquam maxime, maiores ipsam hic, quae corrupti nam vel autem earum, nulla voluptas blanditiis\r\n                      corporis. Facilis voluptates sequi explicabo soluta? Eum error fugit quis laborum. Error ducimus ullam\r\n                      minus qui accusantium ut, tenetur nam quia neque velit quae! Qui quisquam dolor explicabo! Voluptates\r\n                      consequuntur voluptatibus, odio asperiores temporibus ipsum error nesciunt labore praesentium\r\n                      perferendis sequi, nam delectus aliquid soluta debitis veniam commodi veritatis iure saepe aliquam?\r\n                      Placeat esse, doloribus blanditiis eum accusamus architecto quia iusto velit explicabo magni sint quas,\r\n                      obcaecati ad ea, consectetur beatae doloremque. Ab vitae natus dolore cupiditate assumenda adipisci sit\r\n                      architecto nisi, perferendis maxime! Necessitatibus ipsum iure voluptatibus fugit eius excepturi totam\r\n                      beatae, nobis debitis odio qui tempora dolorum ex rem impedit exercitationem sit vitae ad voluptatem.\r\n                      Amet excepturi aspernatur quod dignissimos cum iusto eos explicabo quia sint vel esse, magni voluptatem\r\n                      officia officiis, sapiente veritatis autem facilis ipsa! Eligendi sed accusamus vitae quod nisi quam\r\n                      voluptates, eveniet nemo impedit aliquid dolor omnis commodi maiores animi reiciendis est voluptatum\r\n                      illo aspernatur sit fugit porro? Dolorem molestias voluptates vitae consectetur molestiae mollitia\r\n                      consequuntur quis unde harum tempore eligendi, eos autem, eius doloribus! Neque veniam, cupiditate ad\r\n                      esse aut magni eveniet sed quae dolorem fuga ipsa, harum distinctio saepe nemo iure minima nam iusto\r\n                      cumque laborum animi blanditiis nesciunt facere impedit? Modi numquam, officiis non molestias alias nemo\r\n                      enim quisquam recusandae voluptate delectus possimus, explicabo, corrupti aperiam quia. Tempore vel qui\r\n                      dolore quasi, consequatur temporibus accusantium illo assumenda fuga cum id sit ex, nulla corrupti nam\r\n                      beatae mollitia aliquid labore doloribus excepturi? Adipisci, accusantium aperiam! Recusandae tempora\r\n                      ratione eum atque quas perferendis, quisquam repellendus maxime corrupti tenetur eligendi, placeat\r\n                      obcaecati architecto, delectus ullam libero fugit aut ipsa ipsam pariatur accusamus itaque commodi\r\n                      ducimus consectetur? Dicta velit unde provident ab? Quae ea facere ex eius, aliquid delectus hic. Qui\r\n                      eaque recusandae, alias beatae modi, provident ab sit sint quasi inventore debitis sunt. Magni labore, a\r\n                      ipsum architecto et repellat totam itaque laboriosam aperiam. Quis ab consectetur dicta dolorem commodi\r\n                      vero reprehenderit quas odio, sapiente eaque harum architecto repudiandae quaerat, facilis recusandae,\r\n                      aliquid tempora nihil possimus dignissimos rerum iusto nam? Aliquid placeat cupiditate, quaerat dolor\r\n                      provident mollitia doloremque. Nobis necessitatibus impedit porro laborum qui debitis ipsum labore unde\r\n                      fugit, officiis dolore quam? Labore eveniet possimus qui error, enim distinctio dolorem quia praesentium\r\n                      esse ex dignissimos eius deleniti totam commodi voluptatem porro consectetur veniam ducimus. Delectus,\r\n                      nesciunt accusamus? Fugit eos nulla reprehenderit ullam soluta rerum, nam magnam, nemo excepturi ex\r\n                      iusto alias obcaecati quis incidunt omnis sint deserunt repellendus voluptates architecto. Maxime\r\n                      blanditiis ratione eos. Esse voluptates architecto iure repellat deserunt, aliquam, cupiditate odit ipsa\r\n                      libero accusantium earum voluptatem ullam eveniet eaque dolorem, cumque molestiae nesciunt placeat\r\n                      officia? Aut, est consequatur animi ducimus eligendi harum accusantium voluptas tenetur eius ut? Est aut\r\n                      similique rem vel ea doloremque quas dicta deserunt ab ad quis iste minima hic necessitatibus tempora\r\n                      earum optio impedit modi eum, unde officiis adipisci facilis. Provident iure obcaecati vel sint vitae,\r\n                      nesciunt tempora laborum maxime autem voluptatem voluptates nemo magnam ipsam cumque aperiam veritatis\r\n                      culpa quos fugit sapiente delectus natus reprehenderit libero totam sit? Repudiandae adipisci asperiores\r\n                      alias neque a explicabo vero illo quis reprehenderit est nemo nostrum, ut provident sed? Pariatur\r\n                      eveniet, saepe, recusandae ullam soluta voluptatum tempora dolores ea voluptas vel labore rem aperiam\r\n                      maiores. Ullam expedita at odit explicabo officiis aut porro molestias cum a repellendus.', 'college-2.jpg', '/jadavpur-university', '0000-00-00 00:00:00'),
+(2, 'KALYANI GOVERMENT COLLEGE', 'Best placement statistics with placements in Google, Microsoft, etc. Special care to promote students for Higher Education viz. M.Tech, MBA, MS, Ph.D.', 'college-3.jpg', '', '0000-00-00 00:00:00'),
+(3, 'HALDIA INSTITUTE OF TECHNOLOGY', 'Course Curriculum Overview : I have chosen electronics and communication engineering at the Haldia Institute of Technology because this branch gives 100% placement and faculty members are very helpful and are good enough to teach your curriculum in the best way.', 'college-4.jpeg', '', '2021-09-22 20:51:10'),
+(4, 'HALDIA INSTITUTE OF TECHNOLOGY', 'Course Curriculum Overview : I have chosen electronics and communication engineering at the Haldia Institute of Technology because this branch gives 100% placement and faculty members are very helpful and are good enough to teach your curriculum in the best way.', 'college-5.jpeg', '', '2021-09-22 20:51:21'),
+(5, '[value-2]', '[value-3]', '[value-4]', '', '2021-09-27 18:23:02'),
+(6, 'Testing College Title', ' <p>testing</p>\r\n', 'hindi current affairs.png', '', '2021-09-27 18:24:33'),
+(8, 'Testing College Title', ' <p>The error_reporting(0) is for getting 0 error while php code is running.<br />\r\n$_files is work behind the scene. It is being used to upload files via the HTTP POST method and hold the attributes of files.<br />\r\n$filename is a name used to uniquely identify a computer file stored in a file system.</p>\r\n\r\n<h2 style=\"margin-left: 480px;\">Testing Title</h2>\r\n\r\n<p><br />\r\n$tempname is used to copy the original name of the file which is uploaded to the database as the temp name where the image is stored after upload.<br />\r\n$folder defines the path of the uploaded image into the database to the folder where you want to be stored. The &ldquo;image/&rdquo; the folder name where the image is to be saved after the upload. And the .$filename is used for fetching or upload the file.<br />\r\n$db, the basic line for any of the PHP code for connecting to the database.<br />\r\n$sql used for the inserting the image into the database of table name image to the variable filename.<br />\r\nmysqli_query is the function to executing query of $db and $sql.<br />\r\nNow, let&rsquo;s move the uploaded image into the folder which named as the image. The image named folder is saved into the WAMP or XAMPP server folder which is in C drive into the www folder.<br />\r\n$result function is used for the retrieve the image from the database.<br />\r\nCombination of the above codes: And the final code of upload the image into MySQL using PHP is as followed.&nbsp;</p>\r\n', '2021-09-13.png', '', '2021-09-27 21:23:47'),
+(9, 'Kolkata GVT College', ' <p><span style=\"color: rgb(0, 0, 0); font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 12px;\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas feugiat consequat diam. Maecenas metus. Vivamus diam purus, cursus a, commodo non, facilisis vitae, nulla. Aenean dictum lacinia tortor. Nunc iaculis, nibh non iaculis aliquam, orci felis euismod neque, sed ornare massa mauris sed velit. Nulla pretium mi et risus. Fusce mi pede, tempor id, cursus ac, ullamcorper nec, enim. Sed tortor. Curabitur molestie. Duis velit augue, condimentum at, ultrices a, luctus ut, orci. Donec pellentesque egestas eros. Integer cursus, augue in cursus faucibus, eros pede bibendum sem, in tempus tellus justo quis ligula. Etiam eget tortor. Vestibulum rutrum, est ut placerat elementum, lectus nisl</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p style = \"display:flex; justyfi-content: center;\">heading</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"color: rgb(0, 0, 0); font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 12px;\">aliquam velit, tempor aliquam eros nunc nonummy metus. In eros metus, gravida a, gravida sed, lobortis id, turpis. Ut ultrices, ipsum at venenatis fringilla, sem nulla lacinia tellus, eget aliquet turpis mauris non enim. Nam turpis. Suspendisse lacinia. Curabitur ac tortor ut ipsum egestas elementum. Nunc imperdiet gravida mauris.</span></p>\r\n', '2021-09-13 (3).png', '', '2021-09-27 21:43:25'),
+(10, 'Kolkata GVT College', ' <p><span style=\"color: rgb(0, 0, 0); font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 12px;\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas feugiat consequat diam. Maecenas metus. Vivamus diam purus, cursus a, commodo non, facilisis vitae, nulla. Aenean dictum lacinia tortor. Nunc iaculis, nibh non iaculis aliquam, orci felis euismod neque, sed ornare massa mauris sed velit. Nulla pretium mi et risus. Fusce mi pede, tempor id, cursus ac, ullamcorper nec, enim. Sed tortor. Curabitur molestie. Duis velit augue, condimentum at, ultrices a, luctus ut, orci. Donec pellentesque egestas eros. Integer cursus, augue in cursus faucibus, eros pede bibendum sem, in tempus tellus justo quis ligula. Etiam eget tortor. Vestibulum rutrum, est ut placerat elementum, lectus nisl</span></p>\r\n\r\n<h1 style=\"display: flex; justify-content: center;\">heading</h1>\r\n\r\n<p><span style=\"color: rgb(0, 0, 0); font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 12px;\">aliquam velit, tempor aliquam eros nunc nonummy metus. In eros metus, gravida a, gravida sed, lobortis id, turpis. Ut ultrices, ipsum at venenatis fringilla, sem nulla lacinia tellus, eget aliquet turpis mauris non enim. Nam turpis. Suspendisse lacinia. Curabitur ac tortor ut ipsum egestas elementum. Nunc imperdiet gravida mauris.</span></p>\r\n', '2021-09-13 (3).png', '', '2021-09-27 21:44:40'),
+(11, 'Testing college 2', ' <p>​first I think that it works but now it doesn&#39;t. $filename = pathinfo($_FILES[&#39;file&#39;][&#39;name&#39;], PATHINFO_FILENAME); var_dump($filename); it gives me string(0) &quot;&quot; .. I tried everything &ndash;&nbsp;<br />\r\nAnton Oct 22 &#39;13 at 7:0 you just need to echo $filename; I am 100% sure it will work. in your case you have to change the code like $filename = pathinfo($_FILES[&#39;picture&#39;][&#39;name&#39;], PATHINFO_FILENAME); &ndash;&nbsp; Ram Sharma&nbsp;&nbsp;Oct 22 &#39;13 at 7:13&nbsp; umm I tried , In fact I must put that name of pic in database , so i&#39;ve got this ....` $filename = pathinfo($_FILES[&#39;picture&#39;][&#39;name&#39;], PATHINFO_FILENAME); $insert[&#39;img&#39;]=$filename; ` ... and it&#39;s still doens&#39;t want to put it , (I&#39;m using smarty) &ndash;&nbsp; Anton&nbsp;&nbsp;Oct 22 &#39;13 at 7:30 have you tried to echo or dump $filename to make sure that you are getting exact file name? &ndash;&nbsp; Ram Sharma<br />\r\n&nbsp;Oct 22 &#39;13 at 7:33 yea, and I told you than it gives me string(0) &quot;&quot; , where I can give you the whole code to see it &ndash;&nbsp; Anton<br />\r\n&nbsp;Oct 22 &#39;13 at 7:36</p>\r\n\r\n<h1 style=\"display: flex; justify-content: center;\">Heading</h1>\r\n', 'Screenshot (128).png', '', '2021-09-27 21:51:23'),
+(12, 'JIS COLLEGE OF ENGINEERING', ' <p>JIS College of Engineering (JISCE) is situated in Kolkata and affiliated with Maulana Abul Kalam Azad University of Technology. It was established in 2000 by Sardar Jodh Singh. The college is ranked 71 in Outlook ranking and 21 in Times Engineering. The institute offers B.Tech, BBA, BCA, M.Tech, and MBA courses. It also offers B.Tech (Lateral Entry).</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h3><strong>Mode of Admission</strong></h3>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Admission to B.Tech is done on the basis of JEE Main/AMPAI or West Bengal Joint Entrance Exam (WBJEE) followed by West Bengal Joint Entrance Exam Board (WBJEEB) counseling. For M.Tech, candidates are selected on the basis of GATE score or Post Graduate Entrance Test (PGET) by MAKAUT. Admission to B.Tech lateral is done on the basis of JELET.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h4><strong>Course</strong></h4>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li>B.Tech</li>\r\n	<li>M.Tech</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h4><strong>Course Duration</strong></h4>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li>4 years</li>\r\n	<li>2 years</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h4><strong>Full Course Fee</strong></h4>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<ul>\r\n	<li>4,06,400</li>\r\n	<li>2,22,100</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Ranking (NIRF)</strong></p>\r\n\r\n<p>-----</p>\r\n\r\n<h3><strong>Engineering Courses Offered</strong></h3>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h4><strong>B.Tech</strong></h4>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Civil Engineering</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Mechanical Engineering</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Electrical Engineering</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Computer Science &amp; Engineering</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Electronics &amp; Communication Engineering</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Information Technology</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Biomedical Engineering</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>\r\n<h4><strong>M.Tech</strong></h4>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Mobile Communication &amp; Networking Technology</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Computer Science &amp; Engineering</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Electrical Device &amp; Power System</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Mechanical Engineering</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h3><strong>Top Recruiters</strong></h3>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Hyundai</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Tech Mahindra</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Capgemini</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Johnson Controls</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Indigo</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Infosys</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Amazon<span style=\"white-space:pre\"> </span>&bull;<span style=\"white-space:pre\"> </span>Amazon</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>WIPRO</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Calsoft</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Xento</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>Kovair</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>RMC</div>\r\n\r\n<div>&bull;<span style=\"white-space:pre\"> </span>KONY</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n', '', '/jis_college_of_engineering', '2021-10-01 08:43:27'),
+(13, 'Testing College Title', ' <p>fafafaf</p>\r\n', 'Screenshot (124).png', '/testing-college-title', '2021-10-02 22:41:38'),
+(14, 'yse college', ' <p>dfafl lkjflkajlkfj lkjflkajf ljtajg g jglajgjmg ijtjg g;lkg;lk;s k rajs h oso lk;akp kg;kgpoit g jkgjk kpgi pkogk gpogpi pg poikpgoifgklpfg ptoipgokpgo ra ijiojut pk rakj t jp rajes&nbsp; bhdad a is mu nam is rajesh bhdars&nbsp;</p>\r\n', 'rajesh-college-website.jpeg', '/yse-college', '2022-03-28 20:07:32'),
+(15, 'Testing college 2', ' <p>I am Rajesh bhadra i am a student of jis college of engineering. I am kjahfioa iof oijfiajfoi lkjlajoi klmrlkajrfj jfoujr rtah&nbsp; ong&nbsp; rojg dk&nbsp; ls gj is maken takewhn wheather we are a student is name class cka is nae isne la a</p>\r\n', 'Untitled.png', '/testing-college-2', '2022-03-28 20:18:44'),
+(16, 'TESTING COLLEGE 3', ' <p>bakjhfa lkajfkljalf oprjpoqra ij</p>\r\n', 'Screenshot (113).png', '/testing-college-3', '2022-03-29 19:17:29'),
+(17, 'INSTITUTE OF ENGINEERING AND MANAGEMENT, KOLKATA (IEM)', ' <p>gagagdrr fadfasdf dfaff adfadfasfdaf dfafadfafad dfadfasd dfasdfadf</p>\r\n', 'collage-1.jpg', '/institute-of-engineering-and-management,-kolkata-(iem)', '2022-03-31 13:30:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comparetable`
+--
+
+CREATE TABLE `comparetable` (
+  `compare_table_id` int(11) NOT NULL,
+  `compare_table_collage` varchar(200) NOT NULL,
+  `compare_table_title` varchar(200) NOT NULL,
+  `compare_table_disc` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `comparetable`
+--
+
+INSERT INTO `comparetable` (`compare_table_id`, `compare_table_collage`, `compare_table_title`, `compare_table_disc`) VALUES
+(1, 'JADAVPUR UNIVERSITY', 'Placement', '95%'),
+(2, 'JADAVPUR UNIVERSITY', 'Campus Life', 'Good '),
+(3, 'JADAVPUR UNIVERSITY', 'Best Branch', 'CSE'),
+(4, 'JADAVPUR UNIVERSITY', 'Heigest LPA', '1Cr'),
+(5, 'Jadavpur', 'Support', 'Good'),
+(6, 'Jadavpur Univarsity', 'Avarege Placement', '90%'),
+(7, 'KALYANI GOVERMENT COLLEGE', 'Placement', '85%'),
+(8, 'KALYANI GOVERMENT COLLEGE', 'Campus Life', 'Good'),
+(9, 'KALYANI GOVERMENT COLLEGE', 'Best Branch', 'ECE'),
+(10, 'KALYANI GOVERMENT COLLEGE', 'Heigest LPA', '40LK'),
+(11, 'KALYANI GOVERMENT COLLEGE', 'Support', 'Good'),
+(12, 'KALYANI GOVERMENT COLLEGE', 'Avarege Placement', '7LPA'),
+(13, 'kolkata', 'city type', 'metropoliton'),
+(14, 'yes college', 'NAAC', 'Yes'),
+(15, 'testing ollege 2', 'divided', 'ojljlf'),
+(16, 'testing ollege 2', 'divided', 'ojljlf'),
+(17, 'testing ollege 2', 'divided', 'ojljlf'),
+(18, 'TESTING COLLEGE 3', 'divided', 'jghfkajhfbka');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_us`
+--
+
+CREATE TABLE `contact_us` (
+  `contact_id` int(11) NOT NULL,
+  `contact_name` varchar(100) NOT NULL,
+  `contact_phone` bigint(10) NOT NULL,
+  `contact_email` text NOT NULL,
+  `contact_about` varchar(100) NOT NULL,
+  `contact_messge` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact_us`
+--
+
+INSERT INTO `contact_us` (`contact_id`, `contact_name`, `contact_phone`, `contact_email`, `contact_about`, `contact_messge`) VALUES
+(1, '', 0, '', '', ' '),
+(2, '', 0, '', '', ' '),
+(3, '', 0, '', '', ' '),
+(4, '', 2147483647, 'rajeshblogger62@gmail.com', 'fafaf', ' fafafafafafaafafafaf'),
+(5, ' ', 0, ' ', '  ', ''),
+(6, ' ', 0, ' ', '  ', ''),
+(7, ' Rajesh Bhadra', 2147483647, ' rajeshblogger62@gmail.com', ' fafafaf ', 'fafafafaf'),
+(8, ' Rajesh Bhadra', 2147483647, ' rajeshblogger62@gmail.com', ' DFAFAFAFF ', 'AFAFAFAFAFAF'),
+(9, ' Rajesh Bhadra', 0, ' rajeshblogger62@gmail.com', ' fafafaf ', 'fafafafaf'),
+(10, ' Rajesh Bhadra', 2147483647, ' rajeshblogger62@gmail.com', ' fafafaf ', 'faarerq3rrfatg56563'),
+(11, ' Rajesh Bhadra', 2147483647, ' rajeshblogger62@gmail.com', ' fafaf ', 'rerere'),
+(12, ' Anupam sing ', 2147483647, ' rajeshblogger62@gmail.com', ' ererert ', 'aafaar'),
+(13, ' Rajesh Bhadra', 2147483647, ' rajeshblogger62@gmail.com', ' ragesg ', 'rafess'),
+(14, ' Anupam sing ', 2147483647, ' rajeshbhadra62@gmail.com', ' fafafaf ', 'csaterw'),
+(15, ' Rajesh Bhadra', 8388071823, ' rajeshblogger62@gmail.com', ' fafaf ', 'rererq'),
+(16, ' Rajesh Bhadra', 8388071823, ' rajeshblogger62@gmail.com', ' contact ', 'xyz'),
+(17, ' aman shaw', 8989846464, ' rajshbhadra62@gmial.com', ' xyx ', 'test'),
+(18, ' Rajesh Bhadra', 8388071823, ' rajeshblogger62@gmail.com', ' ragesg ', 'ff'),
+(19, ' Rajesh Bhadra', 9775947315, ' rajeshbhadra62@gmail.com', ' fafaf ', 'afafafaf'),
+(20, ' Rajesh Bhadra', 8388071823, ' rajeshblogger62@gmail.com', ' fafaf ', 'yes working'),
+(21, ' Rajesh Bhadra', 8388071823, ' iam@gmail.com', ' ererert ', 'rajesh bhadra');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `query`
+--
+
+CREATE TABLE `query` (
+  `query_id` int(11) NOT NULL,
+  `query_post_id` int(11) NOT NULL,
+  `query_title` varchar(100) NOT NULL,
+  `query_content` text NOT NULL,
+  `login_user_id` int(11) NOT NULL,
+  `slug_url` text NOT NULL,
+  `query_date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `query`
+--
+
+INSERT INTO `query` (`query_id`, `query_post_id`, `query_title`, `query_content`, `login_user_id`, `slug_url`, `query_date`) VALUES
+(1, 1, 'Jadavpur college higest LPA?', 'can anyone tell me , i want to know', 2, '', '2021-09-26 11:49:48'),
+(2, 11, 'how is the placement of this college ?', 'fafaf', 1, '', '2021-09-28 15:32:31'),
+(3, 11, '&lt;how is the placement of this college ?', 'fafaf&gt;', 1, '', '2021-09-28 15:33:09'),
+(4, 13, 'how is the placement of this college ?', 'good\r\n', 1, '', '2021-10-03 22:24:18'),
+(5, 0, 'how is the placement of this college ?', 'Yes', 1, '', '2021-10-05 16:18:40'),
+(6, 13, 'how is the placement of this college ?', 'ra', 1, '', '2021-10-05 16:20:12'),
+(7, 1, 'How is this college ?', 'is this college is good\r\n', 1, '', '2021-10-05 16:23:12'),
+(8, 13, 'can i get admission in this college ?', 'cab', 1, '/can-i-get-admission-in-this-college-', '2021-10-05 18:33:10'),
+(9, 13, 'fafaf', 'sgsgfs', 1, '/fafaf', '2021-10-05 18:34:18'),
+(10, 13, 'how is the placement of this college ?', 'rajesh', 3, '/how-is-the-placement-of-this-college-', '2021-10-05 18:40:46'),
+(11, 13, 'how is this is college is it good get admission? ', 'yes how is this\r\n', 3, '/how-is-this-is-college-is-it-good-get-admission-', '2022-03-03 00:38:15'),
+(12, 12, 'how is the placement of this college ?', 'gsgfgrt', 3, '/how-is-the-placement-of-this-college-', '2022-03-03 20:08:00'),
+(13, 16, 'can i get admission in this college ?', 'yes\r\n', 5, '/can-i-get-admission-in-this-college-', '2022-03-29 19:19:34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `replay_query`
+--
+
+CREATE TABLE `replay_query` (
+  `replay_id` int(11) NOT NULL,
+  `query_id` int(11) NOT NULL,
+  `replay_content` text NOT NULL,
+  `query_user_id` int(11) NOT NULL,
+  `replay_date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `replay_query`
+--
+
+INSERT INTO `replay_query` (`replay_id`, `query_id`, `replay_content`, `query_user_id`, `replay_date`) VALUES
+(1, 3, '', 1, '2021-09-28 15:33:55'),
+(2, 3, '', 1, '2021-09-28 15:33:58'),
+(3, 11, 'fafafaf', 5, '2022-03-10 17:14:59'),
+(4, 11, 'chdhdh', 5, '2022-03-10 17:15:11'),
+(5, 11, 'chdhdh', 5, '2022-03-10 17:16:03'),
+(6, 11, 'hshhsgs', 5, '2022-03-10 17:16:07'),
+(7, 11, 'hshhsgs', 5, '2022-03-10 17:17:31'),
+(8, 11, 'hdrdg', 5, '2022-03-10 17:17:37'),
+(9, 8, 'bxgsff', 5, '2022-03-22 23:15:16'),
+(10, 13, 'afafa', 5, '2022-03-29 19:19:43'),
+(11, 13, 'ggsg', 5, '2022-03-29 19:19:56'),
+(12, 13, 'afafaf', 5, '2022-03-29 19:20:52');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL,
+  `user_name_id` text NOT NULL,
+  `user_name` text NOT NULL,
+  `user_email` text NOT NULL,
+  `user_password` text NOT NULL,
+  `user_date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_id`, `user_name_id`, `user_name`, `user_email`, `user_password`, `user_date`) VALUES
+(1, '@Rj3', 'Rajesh Bhadra', 'rajeshblogger62@gmail.com', '$2y$10$1wdXbYHiNFnJ1OFv/u1S2eSFZc2cik2kUmb15tiya0c/oJbDItNhK', '2021-09-26 10:27:16'),
+(2, '@Rajesh420', 'Bimal Kumar Biswas', 'hindcurrentaffairs@gmail.com', '$2y$10$zA76MS1AdEErWx1FtbP48uSAOWbqwtQjajohD7IR1/AwxpCCBwBXC', '2021-09-26 11:31:24'),
+(3, '@Rajesh5', 'Rajesh Bhadra', 'rajeshblogger6552@gmail.com', '$2y$10$DlfPRzphtweoae7j2ZZydO4CJdId3OQmhjTezMjqURJaP9v9Gahmi', '2021-09-26 20:45:42'),
+(4, '@Rj4', 'Rajesh Bhadra', 'rj547@gmail.com', '$2y$10$hn9QecBEp9GYmY9PZzZ1muOh96Peid8gJvNvlDNEK/RqalDnTqr0u', '2021-09-27 08:45:51'),
+(5, '@Iam5', 'iam', 'iam@gmail.com', '$2y$10$8o1Tr4x21cYCsaFGQIg8Mu/NoMjyb0vsVAThI.mIvvQtDWVLr3QTC', '2022-03-10 17:12:13'),
+(6, '@Rajesh2', 'Rajesh Bhadra', 'rajeshbhadra62@gmail.com', '$2y$10$Y9zgd2EvoiFMp61i0TNhEecaJtWyjRYeLxBkTqHAU4lhl9v9XVDrO', '2022-03-29 18:32:06');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `about-us`
+--
+ALTER TABLE `about-us`
+  ADD PRIMARY KEY (`about-id`);
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`admin_id`);
+
+--
+-- Indexes for table `college-details`
+--
+ALTER TABLE `college-details`
+  ADD PRIMARY KEY (`college-id`);
+ALTER TABLE `college-details` ADD FULLTEXT KEY `college-name` (`college-name`,`college-content`);
+
+--
+-- Indexes for table `comparetable`
+--
+ALTER TABLE `comparetable`
+  ADD PRIMARY KEY (`compare_table_id`);
+ALTER TABLE `comparetable` ADD FULLTEXT KEY `compare_table_collage` (`compare_table_collage`);
+
+--
+-- Indexes for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  ADD PRIMARY KEY (`contact_id`);
+
+--
+-- Indexes for table `query`
+--
+ALTER TABLE `query`
+  ADD PRIMARY KEY (`query_id`);
+
+--
+-- Indexes for table `replay_query`
+--
+ALTER TABLE `replay_query`
+  ADD PRIMARY KEY (`replay_id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `user_name_id` (`user_name_id`) USING HASH,
+  ADD UNIQUE KEY `user_email` (`user_email`) USING HASH;
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `about-us`
+--
+ALTER TABLE `about-us`
+  MODIFY `about-id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `college-details`
+--
+ALTER TABLE `college-details`
+  MODIFY `college-id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `comparetable`
+--
+ALTER TABLE `comparetable`
+  MODIFY `compare_table_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `query`
+--
+ALTER TABLE `query`
+  MODIFY `query_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `replay_query`
+--
+ALTER TABLE `replay_query`
+  MODIFY `replay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
